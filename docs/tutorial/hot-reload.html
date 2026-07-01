@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>热重载 - JavaRV 文档</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo">
+          <span class="logo-icon">JR</span>
+          <span>JavaRV</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">教程</div>
+          <a href="./quick-start.html" class="nav-item">快速开始</a>
+          <a href="./init-project.html" class="nav-item">项目初始化</a>
+          <a href="./basic-components.html" class="nav-item">基础组件</a>
+          <a href="./state-management.html" class="nav-item">状态管理</a>
+          <a href="./event-handling.html" class="nav-item">事件处理</a>
+          <a href="./hot-reload.html" class="nav-item active">热重载</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">技术文档</div>
+          <a href="../reference/window.html" class="nav-item">Window 组件</a>
+          <a href="../reference/label.html" class="nav-item">Label 组件</a>
+          <a href="../reference/button.html" class="nav-item">Button 组件</a>
+          <a href="../reference/textfield.html" class="nav-item">TextField 组件</a>
+          <a href="../reference/image.html" class="nav-item">Image 组件</a>
+          <a href="../reference/video.html" class="nav-item">Video 组件</a>
+          <a href="../reference/syntax.html" class="nav-item">语法参考</a>
+          <a href="../reference/api.html" class="nav-item">API 参考</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">官网</div>
+          <a href="../../site/index.html" class="nav-item">返回官网</a>
+        </div>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">热重载</h1>
+        <p class="page-description">JavaRV 的核心特性之一是热重载，让你在开发过程中无需重启应用即可看到界面变化。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">工作原理</h2>
+        <p class="paragraph">当你修改 <code class="code-inline">.jrv</code> 文件并保存时，JavaRV 会自动：</p>
+        <ul class="list">
+          <li>检测文件变化</li>
+          <li>重新解析 JRV 文件</li>
+          <li>构建新的 AST</li>
+          <li>对比新旧 AST 差异</li>
+          <li>局部更新界面</li>
+        </ul>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">启动热重载</h2>
+        <p class="paragraph">使用 <code class="code-inline">javarv run</code> 命令启动应用时，热重载会自动启用：</p>
+        <div class="code-block">
+          <code>javarv run</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">手动触发热重载</h2>
+        <p class="paragraph">使用 <code class="code-inline">javarv reload</code> 命令手动触发热重载：</p>
+        <div class="code-block">
+          <code>javarv reload</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">暂停和恢复</h2>
+        <div class="code-block">
+          <code>javarv pause   # 暂停热重载<br>javarv resume  # 恢复热重载</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">配置热重载</h2>
+        <p class="paragraph">在 <code class="code-inline">config.json</code> 中配置热重载：</p>
+        <div class="code-block">
+          <code>{<br>  "hotreload": {<br>    "delay": 500,<br>    "debounce": 500<br>  }<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">完成！</h2>
+        <p class="paragraph">恭喜你完成了 JavaRV 教程！现在你可以开始构建自己的应用了。</p>
+        <a href="../reference/window.html" class="btn btn-primary">查看技术文档</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

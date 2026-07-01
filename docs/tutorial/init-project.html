@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>项目初始化 - JavaRV 文档</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo">
+          <span class="logo-icon">JR</span>
+          <span>JavaRV</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">教程</div>
+          <a href="./quick-start.html" class="nav-item">快速开始</a>
+          <a href="./init-project.html" class="nav-item active">项目初始化</a>
+          <a href="./basic-components.html" class="nav-item">基础组件</a>
+          <a href="./state-management.html" class="nav-item">状态管理</a>
+          <a href="./event-handling.html" class="nav-item">事件处理</a>
+          <a href="./hot-reload.html" class="nav-item">热重载</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">技术文档</div>
+          <a href="../reference/window.html" class="nav-item">Window 组件</a>
+          <a href="../reference/label.html" class="nav-item">Label 组件</a>
+          <a href="../reference/button.html" class="nav-item">Button 组件</a>
+          <a href="../reference/textfield.html" class="nav-item">TextField 组件</a>
+          <a href="../reference/image.html" class="nav-item">Image 组件</a>
+          <a href="../reference/video.html" class="nav-item">Video 组件</a>
+          <a href="../reference/syntax.html" class="nav-item">语法参考</a>
+          <a href="../reference/api.html" class="nav-item">API 参考</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">官网</div>
+          <a href="../../site/index.html" class="nav-item">返回官网</a>
+        </div>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">项目初始化</h1>
+        <p class="page-description">本章节详细介绍如何初始化和配置 JavaRV 项目。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">使用 init 命令</h2>
+        <p class="paragraph"><code class="code-inline">javarv init</code> 命令会创建一个标准的项目结构：</p>
+        <div class="code-block">
+          <code>my-project/<br>├── GUI/<br>│   ├── Config/<br>│   │   └── rvgui/<br>│   ├── Resources/<br>│   └── src/<br>│       └── rv/<br>│           └── main.jrv<br>├── build/<br>├── log/<br>└── README.md</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">目录说明</h2>
+        <ul class="list">
+          <li><strong>GUI/src/rv/</strong>: 存放 JRV 文件，这是你编写界面的地方</li>
+          <li><strong>GUI/Resources/</strong>: 存放资源文件（图片、字体等）</li>
+          <li><strong>GUI/Config/rvgui/</strong>: 存放配置文件</li>
+          <li><strong>build/</strong>: 构建输出目录</li>
+          <li><strong>log/</strong>: 日志文件目录</li>
+        </ul>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">配置文件</h2>
+        <p class="paragraph"><code class="code-inline">GUI/Config/rvgui/config.json</code> 包含项目配置：</p>
+        <div class="code-block">
+          <code>{<br>  "error": {<br>    "showInWindow": true,<br>    "autoHide": true,<br>    "autoHideDuration": 5000<br>  },<br>  "hotreload": {<br>    "delay": 500,<br>    "debounce": 500<br>  }<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">创建多个窗口</h2>
+        <p class="paragraph">你可以在 <code class="code-inline">main.jrv</code> 中定义多个窗口：</p>
+        <div class="code-block">
+          <code>Window mainWindow {<br>    title: "主窗口";<br>    width: 800;<br>    height: 600;<br>}<br><br>Window settingsWindow {<br>    title: "设置";<br>    width: 400;<br>    height: 300;<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">下一步</h2>
+        <a href="./basic-components.html" class="btn btn-primary">继续学习：基础组件</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

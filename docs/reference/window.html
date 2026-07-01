@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window 组件 - JavaRV 文档</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo">
+          <span class="logo-icon">JR</span>
+          <span>JavaRV</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">教程</div>
+          <a href="../tutorial/quick-start.html" class="nav-item">快速开始</a>
+          <a href="../tutorial/init-project.html" class="nav-item">项目初始化</a>
+          <a href="../tutorial/basic-components.html" class="nav-item">基础组件</a>
+          <a href="../tutorial/state-management.html" class="nav-item">状态管理</a>
+          <a href="../tutorial/event-handling.html" class="nav-item">事件处理</a>
+          <a href="../tutorial/hot-reload.html" class="nav-item">热重载</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">技术文档</div>
+          <a href="./window.html" class="nav-item active">Window 组件</a>
+          <a href="./label.html" class="nav-item">Label 组件</a>
+          <a href="./button.html" class="nav-item">Button 组件</a>
+          <a href="./textfield.html" class="nav-item">TextField 组件</a>
+          <a href="./image.html" class="nav-item">Image 组件</a>
+          <a href="./video.html" class="nav-item">Video 组件</a>
+          <a href="./syntax.html" class="nav-item">语法参考</a>
+          <a href="./api.html" class="nav-item">API 参考</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">官网</div>
+          <a href="../../site/index.html" class="nav-item">返回官网</a>
+        </div>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Window 组件</h1>
+        <p class="page-description">Window 是 JavaRV 应用的根组件，用于定义应用窗口。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">基本用法</h2>
+        <div class="code-block">
+          <code>Window mainWindow {<br>    title: "My Application";<br>    width: 800;<br>    height: 600;<br>    background: white;<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">属性</h2>
+        <table class="table">
+          <tr><th>属性名</th><th>类型</th><th>默认值</th><th>说明</th></tr>
+          <tr><td>title</td><td>string</td><td>JavaRV Application</td><td>窗口标题</td></tr>
+          <tr><td>width</td><td>number</td><td>800</td><td>窗口宽度（像素）</td></tr>
+          <tr><td>height</td><td>number</td><td>600</td><td>窗口高度（像素）</td></tr>
+          <tr><td>x</td><td>number</td><td>-</td><td>窗口左上角 X 坐标</td></tr>
+          <tr><td>y</td><td>number</td><td>-</td><td>窗口左上角 Y 坐标</td></tr>
+          <tr><td>background</td><td>color</td><td>white</td><td>窗口背景颜色</td></tr>
+          <tr><td>resizable</td><td>boolean</td><td>true</td><td>是否可调整大小</td></tr>
+          <tr><td>alwaysOnTop</td><td>boolean</td><td>false</td><td>是否始终置顶</td></tr>
+        </table>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">子元素</h2>
+        <p class="paragraph">Window 可以包含以下子元素：</p>
+        <ul class="list">
+          <li><code class="code-inline">state</code>: 状态定义</li>
+          <li><code class="code-inline">func</code>: 函数定义</li>
+          <li>组件：Label、Button、TextField、Image、Video 等</li>
+        </ul>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">示例</h2>
+        <h3 class="section-subtitle">完整窗口配置</h3>
+        <div class="code-block">
+          <code>Window mainWindow {<br>    title: "Full Window";<br>    width: 1200;<br>    height: 800;<br>    background: #f5f5f5;<br>    resizable: true;<br>}</code>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

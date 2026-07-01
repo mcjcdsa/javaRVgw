@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>状态管理 - JavaRV 文档</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo">
+          <span class="logo-icon">JR</span>
+          <span>JavaRV</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">教程</div>
+          <a href="./quick-start.html" class="nav-item">快速开始</a>
+          <a href="./init-project.html" class="nav-item">项目初始化</a>
+          <a href="./basic-components.html" class="nav-item">基础组件</a>
+          <a href="./state-management.html" class="nav-item active">状态管理</a>
+          <a href="./event-handling.html" class="nav-item">事件处理</a>
+          <a href="./hot-reload.html" class="nav-item">热重载</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">技术文档</div>
+          <a href="../reference/window.html" class="nav-item">Window 组件</a>
+          <a href="../reference/label.html" class="nav-item">Label 组件</a>
+          <a href="../reference/button.html" class="nav-item">Button 组件</a>
+          <a href="../reference/textfield.html" class="nav-item">TextField 组件</a>
+          <a href="../reference/image.html" class="nav-item">Image 组件</a>
+          <a href="../reference/video.html" class="nav-item">Video 组件</a>
+          <a href="../reference/syntax.html" class="nav-item">语法参考</a>
+          <a href="../reference/api.html" class="nav-item">API 参考</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">官网</div>
+          <a href="../../site/index.html" class="nav-item">返回官网</a>
+        </div>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">状态管理</h1>
+        <p class="page-description">JavaRV 提供简洁的状态管理机制，让你可以在界面中响应式地使用状态。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">定义状态</h2>
+        <p class="paragraph">使用 <code class="code-inline">state</code> 关键字定义状态：</p>
+        <div class="code-block">
+          <code>Window mainWindow {<br>    title: "状态管理示例";<br>    width: 800;<br>    height: 600;<br>    <br>    state count = 0;<br>    state username = "";<br>    state isOnline = true;<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">使用状态</h2>
+        <p class="paragraph">在组件中使用状态：</p>
+        <div class="code-block">
+          <code>Window mainWindow {<br>    state count = 0;<br>    <br>    Label countLabel {<br>        text: "Count: " + state.count;<br>        color: #4CAF50;<br>        fontSize: 20;<br>    }<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">修改状态</h2>
+        <p class="paragraph">在事件处理器中修改状态：</p>
+        <div class="code-block">
+          <code>Window mainWindow {<br>    state count = 0;<br>    <br>    Button incrementBtn {<br>        text: "Increment";<br>        onClick: {<br>            state.count = state.count + 1;<br>        }<br>    }<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">状态类型</h2>
+        <p class="paragraph">JavaRV 支持多种状态类型：</p>
+        <div class="code-block">
+          <code>state counter = 0;<br>state price = 99.99;<br>state username = "admin";<br>state isEnabled = true;<br>state colors = ["red", "green", "blue"];<br>state user = { name: "John", age: 30 };</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">响应式更新</h2>
+        <p class="paragraph">当状态变化时，所有引用该状态的组件会自动更新：</p>
+        <div class="code-block">
+          <code>state count = 0;<br><br>Button btn {<br>    text: "Click " + state.count;<br>    onClick: {<br>        state.count = state.count + 1;<br>    }<br>}<br><br>Label status {<br>    text: "Button clicked " + state.count + " times";<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">下一步</h2>
+        <a href="./event-handling.html" class="btn btn-primary">继续学习：事件处理</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

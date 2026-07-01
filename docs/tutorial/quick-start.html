@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>快速开始 - JavaRV 文档</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo">
+          <span class="logo-icon">JR</span>
+          <span>JavaRV</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">教程</div>
+          <a href="./quick-start.html" class="nav-item active">快速开始</a>
+          <a href="./init-project.html" class="nav-item">项目初始化</a>
+          <a href="./basic-components.html" class="nav-item">基础组件</a>
+          <a href="./state-management.html" class="nav-item">状态管理</a>
+          <a href="./event-handling.html" class="nav-item">事件处理</a>
+          <a href="./hot-reload.html" class="nav-item">热重载</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">技术文档</div>
+          <a href="../reference/window.html" class="nav-item">Window 组件</a>
+          <a href="../reference/label.html" class="nav-item">Label 组件</a>
+          <a href="../reference/button.html" class="nav-item">Button 组件</a>
+          <a href="../reference/textfield.html" class="nav-item">TextField 组件</a>
+          <a href="../reference/image.html" class="nav-item">Image 组件</a>
+          <a href="../reference/video.html" class="nav-item">Video 组件</a>
+          <a href="../reference/syntax.html" class="nav-item">语法参考</a>
+          <a href="../reference/api.html" class="nav-item">API 参考</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">官网</div>
+          <a href="../../site/index.html" class="nav-item">返回官网</a>
+        </div>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">快速开始</h1>
+        <p class="page-description">欢迎使用 JavaRV！本教程将帮助你快速上手 JavaRV 框架。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">什么是 JavaRV</h2>
+        <p class="paragraph">JavaRV 是一个基于 Java 的实时视图框架，支持热重载功能，让你在开发过程中无需重启应用即可看到界面变化。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">安装要求</h2>
+        <ul class="list">
+          <li>Java 11 或更高版本</li>
+          <li>Maven 3.6+</li>
+        </ul>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">第一步：创建项目</h2>
+        <p class="paragraph">使用 <code class="code-inline">javarv init</code> 命令初始化一个新项目：</p>
+        <div class="code-block">
+          <code>javarv init my-first-app<br>cd my-first-app</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">第二步：运行项目</h2>
+        <p class="paragraph">使用 <code class="code-inline">javarv run</code> 命令启动应用：</p>
+        <div class="code-block">
+          <code>javarv run</code>
+        </div>
+        <p class="paragraph">应用启动后，你将看到一个窗口界面。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">第三步：修改界面</h2>
+        <p class="paragraph">打开 <code class="code-inline">GUI/src/rv/main.jrv</code> 文件，修改窗口标题：</p>
+        <div class="code-block">
+          <code>Window mainWindow {<br>    title: "我的第一个 JavaRV 应用";<br>    width: 800;<br>    height: 600;<br>    background: white;<br>    <br>    Label greeting {<br>        text: "Hello JavaRV!";<br>        color: #333333;<br>    }<br>}</code>
+        </div>
+        <p class="paragraph">保存文件后，界面会自动刷新，无需重启应用！</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">下一步</h2>
+        <a href="./init-project.html" class="btn btn-primary">继续学习：项目初始化</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

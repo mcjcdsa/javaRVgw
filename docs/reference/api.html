@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API 参考 - JavaRV 文档</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo">
+          <span class="logo-icon">JR</span>
+          <span>JavaRV</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">教程</div>
+          <a href="../tutorial/quick-start.html" class="nav-item">快速开始</a>
+          <a href="../tutorial/init-project.html" class="nav-item">项目初始化</a>
+          <a href="../tutorial/basic-components.html" class="nav-item">基础组件</a>
+          <a href="../tutorial/state-management.html" class="nav-item">状态管理</a>
+          <a href="../tutorial/event-handling.html" class="nav-item">事件处理</a>
+          <a href="../tutorial/hot-reload.html" class="nav-item">热重载</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">技术文档</div>
+          <a href="./window.html" class="nav-item">Window 组件</a>
+          <a href="./label.html" class="nav-item">Label 组件</a>
+          <a href="./button.html" class="nav-item">Button 组件</a>
+          <a href="./textfield.html" class="nav-item">TextField 组件</a>
+          <a href="./image.html" class="nav-item">Image 组件</a>
+          <a href="./video.html" class="nav-item">Video 组件</a>
+          <a href="./syntax.html" class="nav-item">语法参考</a>
+          <a href="./api.html" class="nav-item active">API 参考</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">官网</div>
+          <a href="../../site/index.html" class="nav-item">返回官网</a>
+        </div>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">API 参考</h1>
+        <p class="page-description">本章节介绍 JavaRV CLI 命令和 API。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">CLI 命令</h2>
+        <table class="table">
+          <tr><th>命令</th><th>说明</th></tr>
+          <tr><td><code class="code-inline">javarv init</code></td><td>初始化新项目</td></tr>
+          <tr><td><code class="code-inline">javarv run</code></td><td>启动应用</td></tr>
+          <tr><td><code class="code-inline">javarv build</code></td><td>构建项目</td></tr>
+          <tr><td><code class="code-inline">javarv clean</code></td><td>清理构建目录</td></tr>
+          <tr><td><code class="code-inline">javarv reload</code></td><td>手动触发热重载</td></tr>
+          <tr><td><code class="code-inline">javarv status</code></td><td>查看热重载状态</td></tr>
+          <tr><td><code class="code-inline">javarv logs</code></td><td>查看日志</td></tr>
+          <tr><td><code class="code-inline">javarv pause</code></td><td>暂停热重载</td></tr>
+          <tr><td><code class="code-inline">javarv resume</code></td><td>恢复热重载</td></tr>
+          <tr><td><code class="code-inline">javarv version</code></td><td>显示版本信息</td></tr>
+        </table>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">内置函数</h2>
+        <h3 class="section-subtitle">print()</h3>
+        <p class="paragraph">打印消息到控制台：</p>
+        <div class="code-block">
+          <code>print("Hello World");<br>print(state.value);</code>
+        </div>
+        <h3 class="section-subtitle">alert()</h3>
+        <p class="paragraph">显示弹窗消息：</p>
+        <div class="code-block">
+          <code>alert("操作成功");</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">配置 API</h2>
+        <p class="paragraph">配置文件路径：<code class="code-inline">GUI/Config/rvgui/config.json</code></p>
+        <div class="code-block">
+          <code>{<br>  "error": {<br>    "showInWindow": true,<br>    "autoHide": true<br>  },<br>  "hotreload": {<br>    "delay": 500,<br>    "debounce": 500<br>  }<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">版本历史</h2>
+        <h3 class="section-subtitle">v1.0.0</h3>
+        <ul class="list">
+          <li>初始版本</li>
+          <li>支持 Window、Label、Button、TextField、Image、Video 组件</li>
+          <li>支持热重载</li>
+          <li>支持状态管理</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

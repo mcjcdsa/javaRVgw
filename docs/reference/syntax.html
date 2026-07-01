@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>语法参考 - JavaRV 文档</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo">
+          <span class="logo-icon">JR</span>
+          <span>JavaRV</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">教程</div>
+          <a href="../tutorial/quick-start.html" class="nav-item">快速开始</a>
+          <a href="../tutorial/init-project.html" class="nav-item">项目初始化</a>
+          <a href="../tutorial/basic-components.html" class="nav-item">基础组件</a>
+          <a href="../tutorial/state-management.html" class="nav-item">状态管理</a>
+          <a href="../tutorial/event-handling.html" class="nav-item">事件处理</a>
+          <a href="../tutorial/hot-reload.html" class="nav-item">热重载</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">技术文档</div>
+          <a href="./window.html" class="nav-item">Window 组件</a>
+          <a href="./label.html" class="nav-item">Label 组件</a>
+          <a href="./button.html" class="nav-item">Button 组件</a>
+          <a href="./textfield.html" class="nav-item">TextField 组件</a>
+          <a href="./image.html" class="nav-item">Image 组件</a>
+          <a href="./video.html" class="nav-item">Video 组件</a>
+          <a href="./syntax.html" class="nav-item active">语法参考</a>
+          <a href="./api.html" class="nav-item">API 参考</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">官网</div>
+          <a href="../../site/index.html" class="nav-item">返回官网</a>
+        </div>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">语法参考</h1>
+        <p class="page-description">本章节详细介绍 JavaRV 的语法规范。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">文件结构</h2>
+        <div class="code-block">
+          <code>Window windowName {<br>    property: value;<br>    <br>    state variableName = value;<br>    <br>    ComponentName componentId {<br>        property: value;<br>    }<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">变量类型</h2>
+        <div class="code-block">
+          <code>state integer = 42;<br>state float = 3.14;<br>state string = "Hello";<br>state boolean = true;<br>state array = [1, 2, 3];<br>state object = { key: "value" };</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">表达式</h2>
+        <h3 class="section-subtitle">算术运算</h3>
+        <div class="code-block">
+          <code>state result = state.a + state.b;<br>state product = state.x * state.y;</code>
+        </div>
+        <h3 class="section-subtitle">比较运算</h3>
+        <div class="code-block">
+          <code>state isGreater = state.a &gt; state.b;<br>state isEqual = state.x == state.y;</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">条件语句</h2>
+        <div class="code-block">
+          <code>if (state.count &gt; 10) {<br>    print("Too many");<br>} else {<br>    print("Normal");<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">循环语句</h2>
+        <div class="code-block">
+          <code>for (int i = 0; i &lt; 10; i++) {<br>    print(i);<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">注释</h2>
+        <div class="code-block">
+          <code>// 单行注释<br><br>/*<br>多行注释<br>可以跨越多行<br>*/</code>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

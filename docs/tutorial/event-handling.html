@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>事件处理 - JavaRV 文档</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo">
+          <span class="logo-icon">JR</span>
+          <span>JavaRV</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">教程</div>
+          <a href="./quick-start.html" class="nav-item">快速开始</a>
+          <a href="./init-project.html" class="nav-item">项目初始化</a>
+          <a href="./basic-components.html" class="nav-item">基础组件</a>
+          <a href="./state-management.html" class="nav-item">状态管理</a>
+          <a href="./event-handling.html" class="nav-item active">事件处理</a>
+          <a href="./hot-reload.html" class="nav-item">热重载</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">技术文档</div>
+          <a href="../reference/window.html" class="nav-item">Window 组件</a>
+          <a href="../reference/label.html" class="nav-item">Label 组件</a>
+          <a href="../reference/button.html" class="nav-item">Button 组件</a>
+          <a href="../reference/textfield.html" class="nav-item">TextField 组件</a>
+          <a href="../reference/image.html" class="nav-item">Image 组件</a>
+          <a href="../reference/video.html" class="nav-item">Video 组件</a>
+          <a href="../reference/syntax.html" class="nav-item">语法参考</a>
+          <a href="../reference/api.html" class="nav-item">API 参考</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">官网</div>
+          <a href="../../site/index.html" class="nav-item">返回官网</a>
+        </div>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">事件处理</h1>
+        <p class="page-description">JavaRV 支持丰富的事件处理机制，让你可以响应用户交互。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">常用事件</h2>
+        <table class="table">
+          <tr><th>事件名</th><th>说明</th><th>适用组件</th></tr>
+          <tr><td>onClick</td><td>点击事件</td><td>Button</td></tr>
+          <tr><td>onChange</td><td>内容变化事件</td><td>TextField</td></tr>
+          <tr><td>onFocus</td><td>获取焦点事件</td><td>TextField</td></tr>
+          <tr><td>onBlur</td><td>失去焦点事件</td><td>TextField</td></tr>
+        </table>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">onClick 事件</h2>
+        <div class="code-block">
+          <code>Button submitBtn {<br>    text: "提交";<br>    onClick: {<br>        print("表单已提交");<br>    }<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">onChange 事件</h2>
+        <div class="code-block">
+          <code>TextField input {<br>    text: "";<br>    onChange: {<br>        print("输入内容: " + state.inputValue);<br>    }<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">条件语句</h2>
+        <p class="paragraph">在事件处理器中使用条件语句：</p>
+        <div class="code-block">
+          <code>state isDarkMode = false;<br><br>Button toggleBtn {<br>    text: state.isDarkMode ? "Switch to Light" : "Switch to Dark";<br>    onClick: {<br>        state.isDarkMode = !state.isDarkMode;<br>    }<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">下一步</h2>
+        <a href="./hot-reload.html" class="btn btn-primary">继续学习：热重载</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

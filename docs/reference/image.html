@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image 组件 - JavaRV 文档</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo">
+          <span class="logo-icon">JR</span>
+          <span>JavaRV</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">教程</div>
+          <a href="../tutorial/quick-start.html" class="nav-item">快速开始</a>
+          <a href="../tutorial/init-project.html" class="nav-item">项目初始化</a>
+          <a href="../tutorial/basic-components.html" class="nav-item">基础组件</a>
+          <a href="../tutorial/state-management.html" class="nav-item">状态管理</a>
+          <a href="../tutorial/event-handling.html" class="nav-item">事件处理</a>
+          <a href="../tutorial/hot-reload.html" class="nav-item">热重载</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">技术文档</div>
+          <a href="./window.html" class="nav-item">Window 组件</a>
+          <a href="./label.html" class="nav-item">Label 组件</a>
+          <a href="./button.html" class="nav-item">Button 组件</a>
+          <a href="./textfield.html" class="nav-item">TextField 组件</a>
+          <a href="./image.html" class="nav-item active">Image 组件</a>
+          <a href="./video.html" class="nav-item">Video 组件</a>
+          <a href="./syntax.html" class="nav-item">语法参考</a>
+          <a href="./api.html" class="nav-item">API 参考</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">官网</div>
+          <a href="../../site/index.html" class="nav-item">返回官网</a>
+        </div>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Image 组件</h1>
+        <p class="page-description">Image 组件用于显示图片。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">基本用法</h2>
+        <div class="code-block">
+          <code>Image logo {<br>    src: "logo.png";<br>    width: 100;<br>    height: 100;<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">属性</h2>
+        <table class="table">
+          <tr><th>属性名</th><th>类型</th><th>默认值</th><th>说明</th></tr>
+          <tr><td>src</td><td>string</td><td>""</td><td>图片路径</td></tr>
+          <tr><td>width</td><td>number</td><td>-</td><td>宽度（像素）</td></tr>
+          <tr><td>height</td><td>number</td><td>-</td><td>高度（像素）</td></tr>
+          <tr><td>fit</td><td>string</td><td>contain</td><td>缩放方式</td></tr>
+        </table>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">缩放方式</h2>
+        <table class="table">
+          <tr><th>值</th><th>说明</th></tr>
+          <tr><td>contain</td><td>保持比例，完整显示</td></tr>
+          <tr><td>cover</td><td>保持比例，填充容器</td></tr>
+          <tr><td>fill</td><td>拉伸填充，不保持比例</td></tr>
+        </table>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">图片路径</h2>
+        <p class="paragraph">图片文件应放在 <code class="code-inline">GUI/Resources/</code> 目录下：</p>
+        <div class="code-block">
+          <code>GUI/<br>├── Resources/<br>│   ├── logo.png<br>│   └── banner.jpg</code>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

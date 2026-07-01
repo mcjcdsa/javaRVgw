@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button 组件 - JavaRV 文档</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="sidebar-logo">
+          <span class="logo-icon">JR</span>
+          <span>JavaRV</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">教程</div>
+          <a href="../tutorial/quick-start.html" class="nav-item">快速开始</a>
+          <a href="../tutorial/init-project.html" class="nav-item">项目初始化</a>
+          <a href="../tutorial/basic-components.html" class="nav-item">基础组件</a>
+          <a href="../tutorial/state-management.html" class="nav-item">状态管理</a>
+          <a href="../tutorial/event-handling.html" class="nav-item">事件处理</a>
+          <a href="../tutorial/hot-reload.html" class="nav-item">热重载</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">技术文档</div>
+          <a href="./window.html" class="nav-item">Window 组件</a>
+          <a href="./label.html" class="nav-item">Label 组件</a>
+          <a href="./button.html" class="nav-item active">Button 组件</a>
+          <a href="./textfield.html" class="nav-item">TextField 组件</a>
+          <a href="./image.html" class="nav-item">Image 组件</a>
+          <a href="./video.html" class="nav-item">Video 组件</a>
+          <a href="./syntax.html" class="nav-item">语法参考</a>
+          <a href="./api.html" class="nav-item">API 参考</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">官网</div>
+          <a href="../../site/index.html" class="nav-item">返回官网</a>
+        </div>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Button 组件</h1>
+        <p class="page-description">Button 组件用于创建可交互的按钮。</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">基本用法</h2>
+        <div class="code-block">
+          <code>Button submitBtn {<br>    text: "提交";<br>    background: #4CAF50;<br>    color: white;<br>}</code>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">属性</h2>
+        <table class="table">
+          <tr><th>属性名</th><th>类型</th><th>默认值</th><th>说明</th></tr>
+          <tr><td>text</td><td>string</td><td>""</td><td>按钮文本</td></tr>
+          <tr><td>background</td><td>color</td><td>#4CAF50</td><td>背景颜色</td></tr>
+          <tr><td>color</td><td>color</td><td>white</td><td>文字颜色</td></tr>
+          <tr><td>fontSize</td><td>number</td><td>14</td><td>字体大小（像素）</td></tr>
+          <tr><td>padding</td><td>number</td><td>10</td><td>内边距（像素）</td></tr>
+        </table>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">点击事件</h2>
+        <div class="code-block">
+          <code>Button clickBtn {<br>    text: "Click Me";<br>    onClick: {<br>        print("Button clicked!");<br>    }<br>}</code>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
